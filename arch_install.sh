@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-UCODE_PKG="amd-ucode"
-BTRFS_MOUNT_OPTS="ssd,noatime,compress=zstd:1,space_cache=v2,autodefrag"
+UCODE_PKG="intel-ucode"
+BTRFS_MOUNT_OPTS="nossd,noatime,compress=zstd:1,space_cache=v2,autodefrag"
 
 # Localization
 # https://wiki.archlinux.org/title/Installation_guide#Localization
@@ -14,9 +14,11 @@ TIMEZONE="US/Eastern"
 ZRAM_SIZE='min(ram / 2, 4 * 1024)'
 
 # minimal example
-KERNEL_PKGS="linux"
+KERNEL_PKGS="linux-zen"
 BASE_PKGS="base sudo linux-firmware iptables-nft python"
-FS_PKGS="dosfstools btrfs-progs"
+FS_PKGS="dosfstools e2fsprogs btrfs-progs"
+OTHER_PKGS="man-db vim"
+OTHER_PKGS="$OTHER_PKGS git base-devel ansible"
 
 ## server example
 #KERNEL_PKGS="linux-hardened"
