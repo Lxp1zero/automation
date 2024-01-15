@@ -18,7 +18,6 @@ KERNEL_PKGS="linux-zen"
 BASE_PKGS="base sudo linux-firmware iptables-nft python"
 FS_PKGS="dosfstools e2fsprogs btrfs-progs"
 OTHER_PKGS="man-db vim"
-OTHER_PKGS="$OTHER_PKGS git base-devel ansible"
 
 ## server example
 #KERNEL_PKGS="linux-hardened"
